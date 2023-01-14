@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState, lazy, Suspense} from 'react'
+import Text from './Text.js'
+import {hi} from 'check-two'
+console.log(hi)
 
 function App() {
+  const [state, setState] = useState(false)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => {console.log(Text(2, 3))}} >Click</button>
     </div>
   );
 }
